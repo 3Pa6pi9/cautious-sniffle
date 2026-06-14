@@ -1,0 +1,21 @@
+{
+  "name": "Flutter Environment",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "dart-code.flutter",
+        "dart-code.dart-code"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Flutter Web Preview",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "flutter doctor && flutter pub get"
+}
